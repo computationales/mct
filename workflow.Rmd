@@ -23,7 +23,7 @@ library(readr)
 #library(ingestr)
 library(stringr)
 library(ggridges)
-library(rgdal)
+# library(rgdal)
 library(broom)
 library(cowplot)
 
@@ -1350,6 +1350,11 @@ df_whc_agg <- df_whc |>
   summarise(whc_1m = mean(whc_1m, na.rm = TRUE), whc_2m = mean(whc_2m, na.rm = TRUE)) |> 
   rename(lon = lon_mid, lat = lat_mid)
   # mutate(!!varnam := ifelse(is.nan(!!varnam), NA, !!varnam))
+
+saveRDS(
+  df_whc_agg,
+  file = here::here("data/df_whc_agg.rds")
+)
 ```
 
 ### Plot global WHC

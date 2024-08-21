@@ -1,4 +1,9 @@
 calc_cwd_lue0 <- function(df, inst, nam_lue, do_plot = FALSE, verbose = FALSE){  
+  
+  # The following type were interpreted for Stocker et al (2023) as "flattening":
+  # "Aa", "A1", and "A2a".
+  # cwd_lue0 is interpreted as the root zone water storage capacity estimated 
+  # based on EF or SIF in Stocker et al (2023).
 
   if (nam_lue=="SIF"){
     plot_title <- "ET: ALEXI, precipitation: WATCH-WFDEI, SIF: Duveiller et al."
